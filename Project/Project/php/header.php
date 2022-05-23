@@ -6,7 +6,7 @@
     logout();   
   }
 
-  // each activity update the time
+  // each activity update the time to 10m
   setcookie('timer', 'x', time()+600); 
 
   // if "user agent" and "session ip" not equal to the curent user, logout 

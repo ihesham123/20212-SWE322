@@ -43,7 +43,7 @@
       }
     }
   }else {
-  	echo "<h3>Please <a href=../www/Login.php>Login</a> to see available courses.</h3>";
+  	echo "<h3>Please <a href='../www/login.php'>Login</a> to see available courses.</h3>";
   }
 
   // if post request has class checked classes, confirm adding classes

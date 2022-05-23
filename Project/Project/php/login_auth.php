@@ -8,7 +8,7 @@
 <body>
 <center>
 <?php
-    include('..\config\db_config.php');
+    include('../config/db_config.php');
 
     $email = sanitizeMySQL($conn, $_POST['email']);
     $pword = sanitizeMySQL($conn, $_POST['pword']);
@@ -18,7 +18,7 @@
     $result = mysqli_query($conn, $query);
     $result_row = mysqli_fetch_row($result); // fetch a result row as an array
 
-    // check connection and perform query 
+    // check connection and perform query
     if($result){
         // verify user name and hashed password
         if(mysqli_num_rows($result) > 0 && password_verify($pword, $result_row[3]) ) {
@@ -36,7 +36,7 @@
             header('Refresh: 0; URL=../www/account.php'); // reload the page to welcome page
         }else {
             echo "<h1> wrong username or password </h1>";
-            echo "<h3>Please <a href=../www/Login.php>Login</a> Again.</h3>";
+            echo "<h3>Please <a href='../www/login.php'>Login</a> Again.</h3>";
             echo "<h3> Or <a href='../www/reg.php'> Register </a><h3>";
         }
     }else {

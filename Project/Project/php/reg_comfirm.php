@@ -16,7 +16,7 @@
         add_user($conn, $full_name, $email, $user_pword);
     }else {
         echo "<h1>Email already registered</h1>"; 
-        echo "<h3>Go to the <a href=../www/Login.php>Login</a> page to sign in</h3>";
+        echo "<h3>Go to the <a href='../www/login.php'>Login</a> page to sign in</h3>";
         echo "<h3> Or <a href='../www/reg.php'> Register </a> with different Email<h3>";
     }
     
@@ -26,7 +26,7 @@
         $stmt->bind_param('sss', $un, $em, $pw);
         $stmt->execute();
         echo "<h1>Registered Successfully</h1>"; 
-        echo "<h3>Go to the <a href=../www/Login.php>Login</a> page to sign in </h3>";
+        echo "<h3>Go to the <a href='../www/login.php'>Login</a> page to sign in </h3>";
         $stmt->close();
     }
 

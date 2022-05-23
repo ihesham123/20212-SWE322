@@ -3,5 +3,5 @@
     $_SESSION = array();
     setcookie(session_name(), '', time() - 2592000, '/');
     session_destroy();
-    header("Location:../www/Login.php");
+    header("Location:../www/login.php");
 ?>

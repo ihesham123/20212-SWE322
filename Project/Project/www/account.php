@@ -18,7 +18,7 @@
                 Your id number is: $id </h3>";
 
     }else {
-        echo "<h3>Please <a href=../www/Login.php>Login</a>.</h3>";
+        echo "<h3>Please <a href='../www/login.php'>Login</a>.</h3>";
         echo "<h3> Or <a href='../www/reg.php'> Register </a><h3>";
     }
     // close connection

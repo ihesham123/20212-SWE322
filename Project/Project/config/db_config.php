@@ -3,7 +3,7 @@
 	// constants 
     define("host_ip", "localhost"); // 127.0.0.1
     define("username", "course_user");
-    define("password", "xPlN@E]ovmNHw3-a");
+    define("password", "KnM41KG9PtA0B");
     define("database", "course_enrollment_db");
 
 	$conn = mysqli_connect(host_ip, username, password, database);

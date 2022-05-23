@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 20, 2022 at 10:48 PM
+-- Generation Time: May 22, 2022 at 10:54 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.1
 
@@ -20,6 +20,8 @@ SET time_zone = "+00:00";
 --
 -- Database: `course_enrollment_db`
 --
+CREATE DATABASE IF NOT EXISTS `course_enrollment_db` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE `course_enrollment_db`;
 
 -- --------------------------------------------------------
 
@@ -41,12 +43,12 @@ CREATE TABLE `course` (
 
 INSERT INTO `course` (`course_id`, `course_code`, `course_name`, `number_enrolled_students`, `max_num_of_students`) VALUES
 (1234, 'SWE322', 'Advanced Web Programming', 1, 9),
-(2222, 'SWE312', 'Software Construction', 1, 9),
+(2222, 'SWE312', 'Software Construction', 2, 9),
 (3333, 'CIS381', 'Computer Ethics', 2, 9),
-(4444, 'MTH302', 'Differential Equations', 2, 9),
-(5505, 'SWE301', 'Software Requirements Engineering', 2, 9),
+(4444, 'MTH302', 'Differential Equations', 1, 9),
+(5505, 'SWE301', 'Software Requirements Engineering', 1, 9),
 (6161, 'PHY101', 'Introduction to Physical Science', 2, 9),
-(7717, 'MTH104', 'Calculus I ', 1, 9),
+(7717, 'MTH104', 'Calculus I ', 2, 9),
 (8888, 'CIS103', 'Programming Fundamentals I', 1, 9);
 
 -- --------------------------------------------------------
@@ -66,18 +68,18 @@ CREATE TABLE `enrollment` (
 --
 
 INSERT INTO `enrollment` (`enroll_id`, `user_id`, `course_id`) VALUES
-(100156, 100035, 1234),
-(100157, 100035, 2222),
-(100158, 100035, 3333),
-(100159, 100035, 4444),
-(100160, 100036, 3333),
-(100161, 100036, 4444),
-(100162, 100036, 5505),
-(100163, 100036, 6161),
-(100164, 100037, 5505),
-(100165, 100037, 6161),
-(100166, 100037, 7717),
-(100167, 100037, 8888);
+(100176, 100035, 3333),
+(100177, 100035, 4444),
+(100178, 100035, 5505),
+(100179, 100035, 6161),
+(100172, 100036, 1234),
+(100173, 100036, 2222),
+(100174, 100036, 7717),
+(100175, 100036, 8888),
+(100180, 100037, 2222),
+(100181, 100037, 3333),
+(100182, 100037, 6161),
+(100183, 100037, 7717);
 
 -- --------------------------------------------------------
 
@@ -135,13 +137,13 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `enrollment`
 --
 ALTER TABLE `enrollment`
-  MODIFY `enroll_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=100172;
+  MODIFY `enroll_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=100184;
 
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `user_id` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=100039;
+  MODIFY `user_id` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=100040;
 
 --
 -- Constraints for dumped tables
